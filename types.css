@@ -1,0 +1,68 @@
+
+body{
+    background-color: rgb(17, 18, 23);
+}
+
+div.container{
+    position: relative;
+    display: flex;
+    width:100%;
+    height: 500px;  
+    background-color: rgb(30, 32, 41);
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-indent: 10px;
+    border-width: 2px;
+    border-color: rgb(32, 34, 52);
+    border-style: groove;
+    margin-bottom: 20px;
+    background-image: linear-gradient(0deg,black,rgb(30, 32, 41));
+}
+
+div.title{
+    opacity: 0;
+    color: rgb(200, 200, 200);
+    height: 50px;
+    display: flex;
+    transform: translate(30px,200px);
+
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+h1.name-move-text{
+    transform: translate(0,-8px);
+}
+
+h1.otherPage-h1{
+    font-size: 80px;
+}
+
+footer{
+    color: white;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+}
+
+@keyframes slideIn{
+    0% {
+        transform: translateY(800%) translateX(5%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(480%) translateX(5%);
+        opacity: 0;
+    }
+    70%{
+        transform: translateY(360%) translateX(5%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(410%) translateX(5%);
+        opacity: 1;
+    }
+}
