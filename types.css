@@ -1,14 +1,18 @@
 
 body{
     background-color: rgb(17, 18, 23);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 30px;
 }
 
 div.container{
     position: relative;
     display: flex;
-    width:100%;
+    width:1200px;
     height: 500px;  
     background-color: rgb(30, 32, 41);
+    margin: 0 auto;
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-indent: 10px;
@@ -33,12 +37,87 @@ div.title{
     animation-delay: 0.2s;
 }
 
-h1.name-move-text{
-    transform: translate(0,-8px);
+div.intro{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 340px;
+    margin: 0 auto;
+    right: 321px;
+    padding: 20px;
+    background-color: rgb(30, 32, 41);
+    border-width: 2px;
+    border-color: rgb(32, 34, 52);
+    border-style: groove;
+    background-image: linear-gradient(0deg,black,rgb(30, 32, 41));
+    text-align: left;
 }
 
-h1.otherPage-h1{
-    font-size: 80px;
+div.MyPastWorks{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 560px;
+    height: 800px;
+    margin: 0 auto;
+    left: 301px;
+    bottom: 385px;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(30, 32, 41);
+    border-width: 2px;
+    border-color: rgb(32, 34, 52);
+    background-image: linear-gradient(0deg,black,rgb(30, 32, 41));
+    border-style: groove;
+}
+
+div.MyPastWorks::-webkit-scrollbar{
+    width: 10px;
+}
+div.MyPastWorks::-webkit-scrollbar-track{
+    background: rgb(52, 56, 72);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+div.MyPastWorks::-webkit-scrollbar-thumb{
+    background: rgb(68, 73, 94);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+div.MyPastWorks::-webkit-scrollbar-thumb:hover{
+    background: rgb(85, 90, 115);
+}
+
+
+h1.name-move-text{
+    transform: translate(0,-2px);
+}
+
+
+img.titleBlender{
+    width: 150px;
+    position: relative;
+    top: 100px;
+    right:550px;
+    rotate: -10deg;
+    
+    animation: 
+    BlendericonSlideIn 1s ease-in-out forwards 0.2s;
+}
+
+img.titleMoon{
+    width: 150px;
+    position: relative;
+    top: 80px;
+    right:160px;
+    rotate: 10deg;
+    border-radius: 10%;
+    animation: 
+    MooniconSlideIn 1s ease-in-out 0.2s forwards;
 }
 
 footer{
@@ -47,6 +126,8 @@ footer{
     justify-content:center;
     padding: 5px;
 }
+
+
 
 @keyframes slideIn{
     0% {
@@ -66,3 +147,32 @@ footer{
         opacity: 1;
     }
 }
+
+@keyframes BlendericonSlideIn{
+    0%{
+        transform: translateY(-100%) translateX(18%);
+        opacity: 0%;
+        rotate: 20deg;
+    }
+    70%{
+        transform: translateY(10%) translateX(-2%);
+    }
+    90%{
+        transform: translateY(-2%);
+    }
+}
+
+@keyframes MooniconSlideIn{
+    0%{
+        transform: translateY(-100%) translateX(-15%);
+        opacity: 0%;
+        rotate: -20deg;
+    }
+    70%{
+        transform: translateY(15%);
+    }
+    90%{
+        transform: translateY(0%);
+    }
+}
+
