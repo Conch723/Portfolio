@@ -2,10 +2,6 @@
 <html lang="en">
 
 <head>
-
-    
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1st Website</title>
@@ -24,18 +20,73 @@
     
     <div class="intro">
         <h1>About Me</h1>
-        <h2>infoinfoinfoinfinfoinfoinfoinfoinfoinfo<br>infoinfoinfoinfoinfoinfoinfoinfoinfoinfo</h2>
+        <h2>
+            infoinfoinfoinfinfoinfoinfoinfoinfoinfo<br>infoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+        </h2>
     </div>
     
     <div class="MyPastWorks">
-        <h1>My Past Works</h1>
+        <h1>My Works</h1>
         
         <img src="imgs/螢幕擷取畫面 2021-07-12 204143.png" alt="">
         <img src="imgs/螢幕擷取畫面 2021-07-14 101101.png" alt="">
         <img src="imgs/螢幕擷取畫面 2021-07-23 101459.png" alt="">
     </div>
     
+    <div class="Skills">
+        <div class="SkillCard">
+            <h1>Blender <img src="imgs/images.png" alt="Blender Icon" class="SkillBlender"></h1>
+                <ul>
+                    <li>Animating(3D) <br>
+                        <div class="SkillBar">
+                            <div class="SkillLevel" style="width: 40%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Lighting(Rendering) <br>
+                        <div class="SkillBar">
+                            <div class="SkillLevel" style="width: 25%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            
+        </div>
+
+        <div class="SkillCard">
+            <h1>Roblox Studio <img src="imgs/RbxStudioIcon.png" alt="RbxStudioIcon" class="SkillRoblox"></h1>
+            <ul>
+                <li>Animating(3D) <br>
+                    <div class="SkillBar">
+                        <div class="SkillLevel" style="width: 50%;"></div>
+                    </div>
+                </li>
+                <li>Building(3D) <br>
+                    <div class="SkillBar">
+                        <div class="SkillLevel" style="width: 20%;"></div>
+                    </div>
+                </li>
+                <li>Scripting <br>
+                    <div class="SkillBar">
+                        <div class="SkillLevel" style="width: 15%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <footer><p>Copyright © SussyConch. All Rights Reserved.</p></footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var blender = document.querySelector('img.titleBlender');
+    blender.addEventListener('animationend', function() {
+        blender.style.animation = 'none';
+    });
+    var Moon = document.querySelector('img.titleMoon');
+    Moon.addEventListener('animationend', function() {
+        Moon.style.animation = 'none';
+    });
+});
+</script>
 </body>
 
 </html>
